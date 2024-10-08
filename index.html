@@ -1,0 +1,1641 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bones & Ammo - Official Website</title>
+    
+    <!-- ================== SEO and Meta Tags ================== -->
+    <meta name="description" content="Official website of Bones & Ammo, delivering the best heavy metal music.">
+    <meta name="keywords" content="heavy metal, Bones & Ammo, music, albums, tours, merchandise">
+    <meta property="og:title" content="Bones & Ammo - Official Website">
+    <meta property="og:description" content="Official website of Bones & Ammo, delivering the best heavy metal music.">
+    <meta property="og:image" content="images/og-image.jpg">
+    <meta property="og:url" content="https://www.bonesandammo.com">
+    <meta property="og:type" content="website">
+    
+    <!-- ================== Google Fonts ================== -->
+    <link href="https://fonts.googleapis.com/css2?family=Metal+Mania&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- ================== Font Awesome for Icons ================== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrQdF5v+AzduXlF0n3j6Vlt6Sz6X0K1mFExH/WnFZ/knkOe9SxZVdYVMzhPN+MHTOXlI3uX4jh3gqTTk3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- ================== Swiper.js for Carousels ================== -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    
+    <!-- ================== Lightbox2 for Image Galleries ================== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" integrity="sha512-KLr8GQBEJmN0R6uM7gYh2Rq4v7V7dURslVjRvXkMhn4hTjyJhM4jz7hvgmNr35E6CCZalJJ6S81kB/Qa+FcjBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- ================== Snipcart CSS ================== -->
+    <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.0.31/default/snipcart.css" />
+    
+    <!-- ================== CSS Styles ================== -->
+    <style>
+        /* ================== Reset Styles ================== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        /* ================== Global Styles ================== */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+        
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            overflow: hidden;
+        }
+        
+        /* ================== Navigation Bar ================== */
+        .navbar {
+            background: #000;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+            transition: background 0.3s ease;
+        }
+        
+        .navbar.scrolled {
+            background: rgba(0, 0, 0, 0.9);
+        }
+        
+        .navbar .logo {
+            color: #e50914;
+            font-size: 1.5rem;
+            font-family: 'Metal Mania', cursive;
+            text-decoration: none;
+        }
+        
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            justify-content: flex-end;
+        }
+        
+        .navbar ul li {
+            margin-left: 2rem;
+        }
+        
+        .navbar ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+        
+        .navbar ul li a:hover,
+        .navbar ul li a.active {
+            color: #e50914;
+        }
+        
+        .hamburger {
+            display: none;
+            font-size: 1.5rem;
+            color: #ffffff;
+            cursor: pointer;
+        }
+        
+        /* ================== Hero Section ================== */
+        .hero {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding-top: 80px; /* To offset fixed navbar */
+            overflow: hidden;
+        }
+        
+        .hero video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            min-width: 100%;
+            min-height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            opacity: 0.5;
+        }
+        
+        .hero-content {
+            z-index: 1;
+        }
+        
+        .hero h1 {
+            font-family: 'Metal Mania', cursive;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #ffffff;
+            text-shadow: 2px 2px 4px #000;
+        }
+        
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            color: #e0e0e0;
+        }
+        
+        .btn {
+            background: #e50914;
+            color: #ffffff;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.3s ease;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        
+        .btn:hover {
+            background: #b20710;
+            transform: scale(1.05);
+        }
+        
+        /* ================== Sections ================== */
+        section {
+            padding: 4rem 0;
+        }
+        
+        section h1, section h2, section h3 {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #e50914;
+        }
+        
+        /* ================== Announcements Section ================== */
+        .announcements {
+            background: #1c1c1c;
+        }
+        
+        .announcement-item {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .announcement-item h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: #ffffff;
+        }
+        
+        .announcement-item p {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            color: #d0d0d0;
+        }
+        
+        /* ================== About Section ================== */
+        .band-members {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        
+        .band-members .member {
+            text-align: center;
+            margin-bottom: 2rem;
+            flex: 1 1 200px;
+            padding: 1rem;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .band-members .member:hover {
+            transform: scale(1.05);
+        }
+        
+        .band-members .member img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 3px solid #e50914;
+            margin-bottom: 1rem;
+        }
+        
+        .band-members .member h3 {
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+            color: #ffffff;
+        }
+        
+        .band-members .member p {
+            font-size: 1rem;
+            color: #d0d0d0;
+        }
+        
+        /* ================== Music Section ================== */
+        .discography {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        
+        .discography .album {
+            text-align: center;
+            margin-bottom: 2rem;
+            flex: 1 1 200px;
+            padding: 1rem;
+            transition: transform 0.3s ease;
+        }
+        
+        .discography .album:hover {
+            transform: scale(1.05);
+        }
+        
+        .discography .album img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border: 3px solid #e50914;
+            margin-bottom: 1rem;
+            transition: opacity 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .discography .album img:hover {
+            opacity: 0.8;
+        }
+        
+        /* ================== Tour Section ================== */
+        .tour-list, .past-shows {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .tour-item, .show {
+            background: #1c1c1c;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            width: 80%;
+            border-left: 5px solid #e50914;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+        
+        .tour-item:hover, .show:hover {
+            background: #2c2c2c;
+            transform: translateX(10px);
+        }
+        
+        .tour-item h3, .show h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: #ffffff;
+        }
+        
+        .tour-item p, .show p {
+            font-size: 1rem;
+            color: #d0d0d0;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* ================== Gallery Section ================== */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border: 3px solid #e50914;
+            transition: opacity 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .gallery-item img:hover {
+            opacity: 0.8;
+        }
+        
+        .videos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+        }
+        
+        .video iframe {
+            width: 100%;
+            max-width: 560px;
+            height: 315px;
+        }
+        
+        /* ================== Store Section ================== */
+        .products {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        
+        .product {
+            background: #1c1c1c;
+            padding: 1rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            width: 250px;
+            border: 3px solid #e50914;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+        
+        .product:hover {
+            background: #2c2c2c;
+            transform: scale(1.05);
+        }
+        
+        .product img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            margin-bottom: 1rem;
+        }
+        
+        .product h3 {
+            margin: 1rem 0 0.5rem 0;
+            font-size: 1.2rem;
+            color: #ffffff;
+        }
+        
+        .product p {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            color: #d0d0d0;
+        }
+        
+        /* ================== Blog Section ================== */
+        .blog-posts .post {
+            background: #1c1c1c;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            border-left: 5px solid #e50914;
+            transition: background 0.3s ease, max-height 0.3s ease;
+            overflow: hidden;
+            max-height: 200px;
+        }
+        
+        .blog-posts .post.active {
+            max-height: 500px;
+        }
+        
+        .blog-posts .post:hover {
+            background: #2c2c2c;
+        }
+        
+        .blog-posts .post h2 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: #ffffff;
+            cursor: pointer;
+        }
+        
+        .blog-posts .post p {
+            font-size: 1rem;
+            color: #d0d0d0;
+            margin-bottom: 1rem;
+        }
+        
+        /* ================== Contact Section ================== */
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            max-width: 600px;
+            margin: auto;
+        }
+        
+        .contact-form label {
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+            color: #ffffff;
+        }
+        
+        .contact-form input,
+        .contact-form textarea {
+            padding: 0.75rem;
+            margin-bottom: 1rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            outline: 2px solid #e50914;
+        }
+        
+        .contact-form button {
+            align-self: center;
+            width: 50%;
+        }
+        
+        /* ================== Footer ================== */
+        footer {
+            background: #000;
+            color: #fff;
+            padding: 2rem 0;
+            text-align: center;
+            position: relative;
+        }
+        
+        .social-links a {
+            color: #ffffff;
+            margin: 0 0.5rem;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            color: #e50914;
+        }
+        
+        /* ================== Back to Top Button ================== */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #e50914;
+            color: #ffffff;
+            padding: 0.75rem;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            cursor: pointer;
+            display: none;
+            z-index: 1000;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+        
+        .back-to-top:hover {
+            background: #b20710;
+            transform: scale(1.1);
+        }
+        
+        /* ================== Responsive Styles ================== */
+        @media (max-width: 768px) {
+            .navbar ul {
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                left: -100%;
+                width: 100%;
+                background: #000;
+                transition: left 0.3s ease;
+            }
+        
+            .navbar ul.active {
+                left: 0;
+            }
+        
+            .navbar ul li {
+                margin: 1.5rem 0;
+                text-align: center;
+            }
+        
+            .hamburger {
+                display: block;
+                position: absolute;
+                right: 1.5rem;
+                top: 1.2rem;
+            }
+        
+            .hero {
+                height: 70vh;
+            }
+        
+            .hero h1 {
+                font-size: 2rem;
+            }
+        
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .discography .album,
+            .band-members .member,
+            .products .product {
+                flex: 1 1 100%;
+            }
+            
+            .gallery-item img {
+                height: 150px;
+            }
+            
+            .video iframe {
+                height: 200px;
+            }
+        }
+        
+        /* ================== Additional Styles ================== */
+        /* Music Player */
+        .music-player {
+            margin-top: 2rem;
+        }
+        
+        .music-player h2 {
+            text-align: center;
+            margin-bottom: 1rem;
+            color: #e50914;
+        }
+        
+        /* Animations */
+        .btn:hover {
+            transform: scale(1.05);
+        }
+        
+        /* Lazy Loading Placeholder */
+        .lazy {
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .gallery-item img {
+    opacity: 0;
+}
+
+.lazy.loaded {
+    opacity: 1;
+}
+
+        
+        /* Modal Styles */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1500; /* Sit on top */
+            padding-top: 100px; /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
+        }
+        
+        .modal-content {
+            background-color: #1c1c1c;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 700px;
+            border-radius: 10px;
+            position: relative;
+            animation: fadeIn 0.5s;
+        }
+        
+        .close {
+            color: #aaa;
+            position: absolute;
+            top: 10px;
+            right: 25px;
+            font-size: 30px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        
+        .close:hover,
+        .close:focus {
+            color: #e50914;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        
+        @keyframes fadeIn {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+        
+        /* ================== Search Input Styles ================== */
+        #blogSearch {
+            width: 100%;
+            padding: 0.75rem;
+            margin-bottom: 2rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        
+        /* ================== Media Queries for Smaller Devices ================== */
+        @media (max-width: 480px) {
+            .navbar .logo {
+                font-size: 1.2rem;
+            }
+            
+            .navbar ul li {
+                margin-left: 1rem;
+            }
+            
+            .hero h1 {
+                font-size: 1.5rem;
+            }
+            
+            .hero p {
+                font-size: 0.9rem;
+            }
+            
+            .announcement-item h3 {
+                font-size: 1.2rem;
+            }
+            
+            .announcement-item p {
+                font-size: 0.9rem;
+            }
+            
+            .band-members .member img {
+                width: 150px;
+                height: 150px;
+            }
+            
+            .discography .album img {
+                width: 150px;
+                height: 150px;
+            }
+            
+            .products .product img {
+                height: 200px;
+            }
+            
+            .lazy.loia
+                height: 150px;
+            }
+            
+            .video iframe {
+                height: 200px;
+            }
+        }
+    </style>
+    
+    <!-- ================== Web App Manifest for PWA ================== -->
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- ================== Icons for PWA ================== -->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/icons/favicon-16x16.png">
+    <link rel="mask-icon" href="images/icons/safari-pinned-tab.svg" color="#e50914">
+    
+    <!-- ================== CSS for Modals ================== -->
+    <!-- Additional CSS can be added here if needed -->
+
+<style>
+    /* Global Styles */
+    body {
+        background: #0d0d0d;
+        color: #f5f5f5;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    h1, h2, h3 {
+        font-family: 'Metal Mania', cursive; /* Heavy Metal Font */
+        color: #ff0000; /* Dark Red */
+        text-shadow: 3px 3px 8px #000; /* Intense shadow for dramatic effect */
+        letter-spacing: 2px;
+    }
+
+    /* Buttons: Rock-style, 3D effect */
+    .btn {
+        background: #ff0000;
+        border: 2px solid #000;
+        color: #fff;
+        padding: 0.75rem 1.5rem;
+        border-radius: 3px;
+        box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: 1px;
+        transition: background 0.3s ease, transform 0.3s ease;
+    }
+
+    .btn:hover {
+        background: #b20000;
+        transform: translateY(-3px);
+        box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.9);
+    }
+
+    /* Music Section Alignment Fix */
+    .music-links {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        margin-top: 1rem;
+    }
+
+    .album {
+        text-align: center;
+        margin-bottom: 2rem;
+        padding: 1rem;
+        background-color: #1a1a1a;
+        border: 3px solid #ff0000;
+        border-radius: 5px;
+        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.8);
+    }
+
+    .album img {
+        border: 4px solid #ff0000;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.9);
+    }
+
+    .album h3 {
+        font-family: 'Metal Mania', sans-serif;
+        margin: 1rem 0;
+        color: #f5f5f5;
+        text-shadow: 2px 2px 6px #000;
+    }
+
+    .album p {
+        color: #bbb;
+        margin-bottom: 1rem;
+    }
+
+    /* Footer with Metal Texture */
+    footer {
+        background: #151515;
+        color: #ccc;
+        padding: 2rem 0;
+        text-align: center;
+        border-top: 4px solid #ff0000;
+    }
+
+    footer p {
+        margin: 0;
+        font-size: 0.9rem;
+    }
+
+    .social-links a {
+        color: #ff0000;
+        margin: 0 1rem;
+        font-size: 1.5rem;
+        transition: color 0.3s ease;
+    }
+
+    .social-links a:hover {
+        color: #b20000;
+    }
+
+    /* Back to Top Button */
+    .back-to-top {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        background-color: #ff0000;
+        color: #fff;
+        border-radius: 50%;
+        padding: 15px;
+        font-size: 24px;
+        display: none;
+        z-index: 999;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .back-to-top:hover {
+        background-color: #b20000;
+        transform: scale(1.1);
+    }
+
+    /* Section Titles */
+    section h1, section h2 {
+        text-align: center;
+        margin-bottom: 2rem;
+        text-transform: uppercase;
+    }
+
+    /* Gallery Styling */
+    .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+    }
+
+    .gallery-item img {
+        width: 100%;
+        border: 4px solid #ff0000;
+        transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    .gallery-item img:hover {
+        opacity: 0.8;
+        transform: scale(1.05);
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .music-links {
+            flex-direction: column;
+        }
+
+        .btn {
+            width: 100%;
+        }
+    }
+</style>
+
+
+</head>
+<body>
+    <!-- ================== Navigation Bar ================== -->
+    <nav class="navbar" role="navigation" aria-label="Main Navigation">
+        <div class="container">
+            <a href="#home" class="logo">Bones & Ammo</a>
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#music">Music</a></li>
+                <li><a href="#tour">Tour</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#store">Store</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- ================== Hero Section ================== -->
+    <section class="hero" id="home">
+        <video autoplay muted loop playsinline>
+            <source src="https://videos.pexels.com/video-files/9694237/9694237-hd_1920_1080_25fps.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+        <div class="hero-content">
+            <h1>Welcome to Bones & Ammo's BoneYard</h1>
+            <p>Feel the power of heavy metal</p>
+            <a href="#music" class="btn">Listen Now</a>
+        </div>
+    </section>
+    
+    <!-- ================== Announcements Section ================== -->
+    <section class="announcements">
+        <div class="container">
+            <h2>Latest News</h2>
+            <!-- Swiper -->
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide announcement-item">
+                        <h3>New Album Release</h3>
+                        <p>Our latest album, "<strong>Out of Shells</strong>", is out now! Available on all streaming platforms.</p>
+                        <a href="#music" class="btn">Listen Now</a>
+                    </div>
+                    <div class="swiper-slide announcement-item">
+                        <h3>Europe Tour 2024</h3>
+                        <p>We’re hitting the road! Check out our tour dates across Europe and grab your tickets.</p>
+                        <a href="#tour" class="btn">View Tour</a>
+                    </div>
+                    <div class="swiper-slide announcement-item">
+                        <h3>Behind the Scenes</h3>
+                        <p>Exclusive behind-the-scenes footage from our latest music video shoot is now live.</p>
+                        <a href="#gallery" class="btn">Watch Now</a>
+                    </div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+                <!-- Add Navigation -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- ================== About Section ================== -->
+    <section class="about" id="about">
+        <div class="container">
+            <h1>About Us</h1>
+            <p>Bones & Ammo was formed in 2015 with a mission to deliver electrifying heavy metal music that resonates with fans worldwide. Our journey began in the underground metal scene, and today, we continue to push the boundaries of the genre with our unique sound and powerful performances.</p>
+            
+            <h2>Band Members</h2>
+            <div class="band-members">
+                <div class="member" data-modal="modal1" tabindex="0" aria-haspopup="dialog" aria-expanded="false">
+                    <img src="https://scontent-dfw5-1.xx.fbcdn.net/v/t1.18169-9/31440224_833453573513082_1692083521830360187_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=f798df&_nc_ohc=UYLGRc88HAAQ7kNvgG_9uY0&_nc_ht=scontent-dfw5-1.xx&oh=00_AYB57n_EU9vrx1wK9Hm5851XXdh40zAOEP5ReVRY2L50vA&oe=6729A1F4" alt="Lead Vocalist">
+                    <h3>Don "BadBones" Turner</h3>
+                    <p>Lead Vocals</p>
+                </div>
+                <div class="member" data-modal="modal2" tabindex="0" aria-haspopup="dialog" aria-expanded="false">
+                    <img src="https://scontent-dfw5-2.xx.fbcdn.net/v/t39.30808-6/432456064_10160025587302481_224664805074645916_n.jpg?stp=dst-jpg_s640x640&_nc_cat=106&ccb=1-7&_nc_sid=50ad20&_nc_ohc=-rTWG_pobq0Q7kNvgHr-HYy&_nc_ht=scontent-dfw5-2.xx&_nc_gid=ANCRv6ok5KWRTkqZKa4MWnx&oh=00_AYBmJarCjp13bE_ut_RbjrD77WxQiRoLZSf2J8fFS5ZB7A&oe=67080002" alt="Lead Guitarist">
+                    <h3>Dakota "Darb" Turner</h3>
+                    <p>Lead Guitar</p>
+                </div>
+                <div class="member" data-modal="modal3" tabindex="0" aria-haspopup="dialog" aria-expanded="false">
+                    <img src="https://scontent-dfw5-1.xx.fbcdn.net/v/t39.30808-6/311014954_2395411307294535_1405677315099113278_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=OLatA1XOp8gQ7kNvgFqA_Kf&_nc_ht=scontent-dfw5-1.xx&_nc_gid=A6ytrX7o_Wm-m0a3GO5sBsy&oh=00_AYCCInc40ll428_68Vhc26GlLftT4FWhzVmaJ6knihABeA&oe=670ADC55" alt="Rhythm Guitarist/Bassist">
+                    <h3>Christian "The Yeti" Turner</h3>
+                    <p>Rhythm Guitar/Bass</p>
+                </div>
+                <div class="member" data-modal="modal4" tabindex="0" aria-haspopup="dialog" aria-expanded="false">
+                    <img src="https://scontent-dfw5-1.xx.fbcdn.net/v/t39.30808-6/273323282_1894838160707946_2119182625173030890_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=a5f93a&_nc_ohc=r1Sh8ODNc00Q7kNvgGk3maJ&_nc_ht=scontent-dfw5-1.xx&_nc_gid=A_ubM7IvAuQIbvD5-aTp6ZQ&oh=00_AYDdoEczNNbzAqNGLngkQ1Ch5JD7z6DmC-OnEaCMvQAGZg&oe=670A12C7" alt="Drummer">
+                    <h3>Jason "J-Dawg" Usrey</h3>
+                    <p>Drums</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- ================== Modals for Band Members ================== -->
+    <!-- Modal 1 -->
+    <div id="modal1" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal1Title">
+        <div class="modal-content">
+            <span class="close" aria-label="Close">&times;</span>
+            <h2 id="modal1Title">Don "BadBones" Turner</h2>
+            <p>BadBones is the powerhouse behind Bones & Ammo's intense vocals. With a passion for heavy metal BadBones brings unmatched energy and emotion to every performance.</p>
+        </div>
+    </div>
+    
+    <!-- Modal 2 -->
+    <div id="modal2" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal2Title">
+        <div class="modal-content">
+            <span class="close" aria-label="Close">&times;</span>
+            <h2 id="modal2Title">Dakota "Darb" Turner</h2>
+            <p>Darb is the guitarist whose riffs define the Bones & Ammo sound. His technical prowess and creative songwriting have been instrumental in crafting the band's unique musical identity.</p>
+        </div>
+    </div>
+    
+    <!-- Modal 3 -->
+    <div id="modal3" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal3Title">
+        <div class="modal-content">
+            <span class="close" aria-label="Close">&times;</span>
+            <h2 id="modal3Title">Christian "The Yeti" Turner</h2>
+            <p>Christian's rhythm guitar and bass lines provide the solid foundation for Bones & Ammo's music. His ability to blend rhythm and melody adds depth and complexity to the band's compositions.</p>
+        </div>
+    </div>
+    
+    <!-- Modal 4 -->
+    <div id="modal4" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal4Title">
+        <div class="modal-content">
+            <span class="close" aria-label="Close">&times;</span>
+            <h2 id="modal4Title">Jason "J-Dawg" Usrey</h2>
+            <p>J-Dawg is the drummer who drives Bones & Ammo's powerful beats. His dynamic drumming style and precise timing keep the band's performances both energetic and cohesive.</p>
+        </div>
+    </div>
+    
+    <!-- ================== Music Section ================== -->
+<section class="music" id="music">
+    <div class="container">
+        <h1>Our Music</h1>
+        <div class="discography swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide album">
+                    <img src="https://i.ytimg.com/vi/3gbuIuNPadI/hqdefault.jpg?sqp=-oaymwE2CNACELwBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_gmAAtAFigIMCAAQARhNIGUoSzAP&rs=AOn4CLA678QtZffiXe5Tb2aKrbylTrYlCA" alt="Shadows of War (Single)">
+                    <h3>Shadows of War (Single)</h3>
+                    <p>Release Date: April ‎17, ‎2024</p>
+                    <div class="music-links">
+                        <a href="https://www.youtube.com/watch?v=4Ef5w2ORLMM&ab_channel=BadBones" class="btn" target="_blank">Listen on YouTube</a>
+                    </div>
+                </div>
+                <div class="swiper-slide album">
+                    <img src="https://scontent-dfw5-2.xx.fbcdn.net/v/t39.30808-6/427946497_10159992408247481_5937907666891926909_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=833d8c&_nc_ohc=6f2JykZwOs4Q7kNvgHg3eDY&_nc_ht=scontent-dfw5-2.xx&_nc_gid=ArkjzdM4a1QDUzyNJm706O7&oh=00_AYANzT2zpDAv_3ZsFdEMmgRmWi6HXav-fag_hfprw0DnxQ&oe=670A2494" alt="Out of Shells (EP)">
+                    <h3>Out of Shells (EP)</h3>
+                    <p>Release Date: April 20, 2017</p>
+                    <div class="music-links">
+                        <a href="https://www.youtube.com/watch?v=1dz0XY_nhs4&t" class="btn" target="_blank">Listen on YouTube</a>
+                    </div>
+                </div>
+                <div class="swiper-slide album">
+                    <img src="https://i.ytimg.com/vi/DOgUdEH2dhc/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLAG6i_M3JVxOdENPHQttsxjLZj9WQ" alt="Out of shells (MixTape)">
+                    <h3>Out of Shells (MixTape)</h3>
+                    <p>Release Date: September 15, 2015</p>
+                    <div class="music-links">
+                        <a href="https://www.youtube.com/watch?v=DOgUdEH2dhc&t" class="btn" target="_blank">Listen on YouTube</a>
+                    </div>
+                </div>
+                <!-- Add more albums as needed -->
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add Navigation -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+
+        <!-- Embedded Spotify Player -->
+        <div class="music-player">
+            <h2>Listen Now</h2>
+            <iframe src="https://open.spotify.com/embed/playlist/068sisqczuNs368h1NW3vI" width="100%" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+        </div>
+    </div>
+</section>
+
+<!-- CSS for Music Section -->
+<style>
+    .discography {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        justify-content: space-around;
+    }
+
+    .album {
+        text-align: center;
+        margin-bottom: 2rem;
+        flex: 1 1 200px;
+        padding: 1rem;
+    }
+
+    .music-links {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        margin-top: 1rem;
+    }
+
+    .btn {
+        background: #e50914;
+        color: white;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+        background: #b20710;
+    }
+</style>
+
+    
+    <!-- ================== Tour Section ================== -->
+    <section class="tour" id="tour">
+        <div class="container">
+            <h1>Upcoming Shows</h1>
+            <div class="tour-list">
+                <div class="tour-item">
+                    <h3>To Be Announced - More Info Coming Soon</h3>
+                    <p>Date: ???</p>
+                    <p>Time: ?</p>
+                    <a href="https://tickets.bonesandammo.com/berlin" class="btn" target="_blank">Buy Tickets</a>
+                </div>
+                <div class="tour-item">
+                    <h3>To Be Announced - More Info Coming Soon</h3>
+                    <p>Date: ???</p>
+                    <p>Time: ?</p>
+                    <a href="https://tickets.bonesandammo.com/london" class="btn" target="_blank">Buy Tickets</a>
+                </div>
+                <div class="tour-item">
+                    <h3>To Be Announced - More Info Coming Soon</h3>
+                    <p>Date: ???</p>
+                    <p>Time: ?</p>
+                    <a href="https://tickets.bonesandammo.com/paris" class="btn" target="_blank">Buy Tickets</a>
+                </div>
+                <!-- Add more tour items as needed -->
+            </div>
+
+            <h2>Past Shows</h2>
+            <div class="past-shows">
+		<div class="show">
+                    <h3>Poplar Bluff, MO - BoneStock 2024</h3>
+                    <p>Date: September 28, 2024</p>
+                    <p>Amazing return show with incredible fan support!</p>
+                </div>
+                <div class="show">
+                    <h3>Cape Girardeau, MO - Pitter's Cafe & Lounge</h3>
+                    <p>Date: June 18, 2016</p>
+                    <p>Amazing energy and an unforgettable performance!</p>
+                </div>
+                <div class="show">
+                    <h3>Kennett, MO - Big Pappa Drinks</h3>
+                    <p>Date: October 11, 2015</p>
+                    <p>Sold-out show with incredible fan support!</p>
+                </div>
+                <!-- Add more past shows as needed -->
+            </div>
+
+            <!-- Google Maps Integration -->
+<h2>Venue Maps</h2>
+<div class="map">
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2483.43898151127!2d-89.53124022532158!3d37.30667903898802!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8877878d7e211d0f%3A0x3745c56a4bb81065!2sPitter's%20Cafe%20%26%20Lounge!5e1!3m2!1sen!2sus!4v1728363693179!5m2!1sen!2sus" 
+        width="100%" 
+        height="450" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+</div>
+
+
+                <!-- Google Maps will be embedded here via JavaScript -->
+            </div>
+        </div>
+    </section>
+    
+    <!-- ================== Gallery Section ================== -->
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <h1>Gallery</h1>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <a href="https://scontent-dfw5-1.xx.fbcdn.net/v/t39.30808-6/355481209_792111249369824_7616232183005291369_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=833d8c&_nc_ohc=XaKQo-eMjiYQ7kNvgFKX2b5&_nc_ht=scontent-dfw5-1.xx&_nc_gid=Ai4DNOGWvsc9BBLX3a9yeHm&oh=00_AYDQdVdIBRFgHYS-MW4mirFUG_Eg_t16-jsp7O2G79QCjA&oe=670A2230" data-lightbox="gallery" data-title="Live Performance">
+                        <img src="https://scontent-dfw5-1.xx.fbcdn.net/v/t39.30808-6/355481209_792111249369824_7616232183005291369_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=833d8c&_nc_ohc=XaKQo-eMjiYQ7kNvgFKX2b5&_nc_ht=scontent-dfw5-1.xx&_nc_gid=Ai4DNOGWvsc9BBLX3a9yeHm&oh=00_AYDQdVdIBRFgHYS-MW4mirFUG_Eg_t16-jsp7O2G79QCjA&oe=670A2230" alt="Live Performance" class="lazy" data-src="https://scontent-dfw5-1.xx.fbcdn.net/v/t39.30808-6/355481209_792111249369824_7616232183005291369_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=833d8c&_nc_ohc=XaKQo-eMjiYQ7kNvgFKX2b5&_nc_ht=scontent-dfw5-1.xx&_nc_gid=Ai4DNOGWvsc9BBLX3a9yeHm&oh=00_AYDQdVdIBRFgHYS-MW4mirFUG_Eg_t16-jsp7O2G79QCjA&oe=670A2230">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="https://scontent-dfw5-1.xx.fbcdn.net/v/t39.30808-6/352554057_792111372703145_4569481806513225494_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=833d8c&_nc_ohc=nm3_AIOM9h0Q7kNvgGGxvLt&_nc_ht=scontent-dfw5-1.xx&_nc_gid=AboRBV0xFX4fw2Abr6kRiJ5&oh=00_AYBw-sCdUQLAnt3BSunUdYPOIhnCNOdJawLbfHHgIPECOw&oe=670ADEEA" data-lightbox="gallery" data-title="Backstage">
+                        <img src="https://scontent-dfw5-1.xx.fbcdn.net/v/t39.30808-6/352554057_792111372703145_4569481806513225494_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=833d8c&_nc_ohc=nm3_AIOM9h0Q7kNvgGGxvLt&_nc_ht=scontent-dfw5-1.xx&_nc_gid=AboRBV0xFX4fw2Abr6kRiJ5&oh=00_AYBw-sCdUQLAnt3BSunUdYPOIhnCNOdJawLbfHHgIPECOw&oe=670ADEEA" alt="Backstage" class="lazy" data-src="https://scontent-dfw5-1.xx.fbcdn.net/v/t39.30808-6/352554057_792111372703145_4569481806513225494_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=833d8c&_nc_ohc=nm3_AIOM9h0Q7kNvgGGxvLt&_nc_ht=scontent-dfw5-1.xx&_nc_gid=AboRBV0xFX4fw2Abr6kRiJ5&oh=00_AYBw-sCdUQLAnt3BSunUdYPOIhnCNOdJawLbfHHgIPECOw&oe=670ADEEA">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="https://scontent-dfw5-2.xx.fbcdn.net/v/t39.30808-6/404376409_896768922237389_8282335525243280413_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=833d8c&_nc_ohc=pkcXjr5v060Q7kNvgEpETEu&_nc_ht=scontent-dfw5-2.xx&_nc_gid=Att_hBB6JVWFKH41-Wtnfhw&oh=00_AYBwRKucAGkZYtoNmlOCw8w41Fly4BKByZNqWnZYaU6k4g&oe=670AD013" data-lightbox="gallery" data-title="Album Cover">
+                        <img src="https://scontent-dfw5-2.xx.fbcdn.net/v/t39.30808-6/404376409_896768922237389_8282335525243280413_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=833d8c&_nc_ohc=pkcXjr5v060Q7kNvgEpETEu&_nc_ht=scontent-dfw5-2.xx&_nc_gid=Att_hBB6JVWFKH41-Wtnfhw&oh=00_AYBwRKucAGkZYtoNmlOCw8w41Fly4BKByZNqWnZYaU6k4g&oe=670AD013" alt="Album Cover" class="lazy" data-src="https://scontent-dfw5-2.xx.fbcdn.net/v/t39.30808-6/404376409_896768922237389_8282335525243280413_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=833d8c&_nc_ohc=pkcXjr5v060Q7kNvgEpETEu&_nc_ht=scontent-dfw5-2.xx&_nc_gid=Att_hBB6JVWFKH41-Wtnfhw&oh=00_AYBwRKucAGkZYtoNmlOCw8w41Fly4BKByZNqWnZYaU6k4g&oe=670AD013">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="https://scontent-dfw5-2.xx.fbcdn.net/v/t39.30808-6/405667026_896769072237374_6313425980912998697_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=833d8c&_nc_ohc=tcwX1RU9FTQQ7kNvgGoetnD&_nc_ht=scontent-dfw5-2.xx&_nc_gid=AV4s9wlbbEXdj8dA91OLnfb&oh=00_AYAyL7mKbXqPR2rZ25WkVUtIjXPTq7ZHfH74nqMT5pFSHg&oe=670AD708" data-lightbox="gallery" data-title="Fan Interaction">
+                        <img src="https://scontent-dfw5-2.xx.fbcdn.net/v/t39.30808-6/405667026_896769072237374_6313425980912998697_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=833d8c&_nc_ohc=tcwX1RU9FTQQ7kNvgGoetnD&_nc_ht=scontent-dfw5-2.xx&_nc_gid=AV4s9wlbbEXdj8dA91OLnfb&oh=00_AYAyL7mKbXqPR2rZ25WkVUtIjXPTq7ZHfH74nqMT5pFSHg&oe=670AD708" alt="Fan Interaction" class="lazy" data-src="https://scontent-dfw5-2.xx.fbcdn.net/v/t39.30808-6/405667026_896769072237374_6313425980912998697_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=833d8c&_nc_ohc=tcwX1RU9FTQQ7kNvgGoetnD&_nc_ht=scontent-dfw5-2.xx&_nc_gid=AV4s9wlbbEXdj8dA91OLnfb&oh=00_AYAyL7mKbXqPR2rZ25WkVUtIjXPTq7ZHfH74nqMT5pFSHg&oe=670AD708">
+                    </a>
+                </div>
+                <!-- Add more gallery items as needed -->
+            </div>
+
+            <!-- Embedded YouTube/Vimeo Videos -->
+            <h2>Videos</h2>
+            <div class="videos">
+                <div class="video">
+                    <iframe src="https://www.youtube.com/embed/BVRIOvRI6lI" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="video">
+                    <iframe src="https://www.youtube.com/embed/1VgaoIvNT7o" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <!-- Add more videos as needed -->
+            </div>
+        </div>
+    </section>
+    
+    <!-- ================== Store Section ================== -->
+    <section class="store" id="store">
+        <div class="container">
+            <h1>Merchandise</h1>
+            <div class="products">
+                <div class="product" data-item-id="tshirt" data-item-price="25.00" data-item-url="/#">
+                    <img src="https://scontent-dfw5-2.xx.fbcdn.net/v/t39.30808-6/434190069_972058851375062_6111458637318479006_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=833d8c&_nc_ohc=wKuugmrZapsQ7kNvgFkJZ8K&_nc_ht=scontent-dfw5-2.xx&_nc_gid=A3NvG7-bgXlsApz5wYs_HTy&oh=00_AYCxr46w1oa0kuYtiqVgNUeymNI3-e1_2aG_zeHTJdtfsA&oe=670AEB59" alt="Bones & Ammo T-Shirt">
+                    <h3>Bones & Ammo T-Shirt</h3>
+                    <p>$25.00</p>
+                    <button class="btn snipcart-add-item" 
+                            data-item-id="tshirt"
+                            data-item-price="25.00"
+                            data-item-url="/#"
+                            data-item-description="High-quality Bones & Ammo T-Shirt"
+                            data-item-image="https://scontent-dfw5-2.xx.fbcdn.net/v/t39.30808-6/434190069_972058851375062_6111458637318479006_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=833d8c&_nc_ohc=wKuugmrZapsQ7kNvgFkJZ8K&_nc_ht=scontent-dfw5-2.xx&_nc_gid=A3NvG7-bgXlsApz5wYs_HTy&oh=00_AYCxr46w1oa0kuYtiqVgNUeymNI3-e1_2aG_zeHTJdtfsA&oe=670AEB59"
+                            data-item-name="Bones & Ammo T-Shirt">
+                        Add to Cart
+                    </button>
+                </div>
+                <div class="product" data-item-id="cd" data-item-price="15.00" data-item-url="/#">
+                    <img src="https://scontent-dfw5-1.xx.fbcdn.net/v/t1.18169-9/31131628_829855993872840_2576546001421065083_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=7b2446&_nc_ohc=LEwXCM7ZMiIQ7kNvgEUZe-3&_nc_ht=scontent-dfw5-1.xx&oh=00_AYBNsTHusvrEPsePbNDMcC6NgSPW1j9Er7AA0aZN4grN9g&oe=672BC7E9" alt="Out of Shells CD">
+                    <h3>Out of Shells CD</h3>
+                    <p>$15.00</p>
+                    <button class="btn snipcart-add-item" 
+                            data-item-id="cd"
+                            data-item-price="15.00"
+                            data-item-url="/#"
+                            data-item-description="Official Bones & Ammo Shadows of War CD"
+                            data-item-image="https://scontent-dfw5-1.xx.fbcdn.net/v/t1.18169-9/31131628_829855993872840_2576546001421065083_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=7b2446&_nc_ohc=LEwXCM7ZMiIQ7kNvgEUZe-3&_nc_ht=scontent-dfw5-1.xx&oh=00_AYBNsTHusvrEPsePbNDMcC6NgSPW1j9Er7AA0aZN4grN9g&oe=672BC7E9"
+                            data-item-name="Shadows of War CD">
+                        Add to Cart
+                    </button>
+                </div>
+                <div class="product" data-item-id="poster" data-item-price="10.00" data-item-url="/#">
+                    <img src="https://scontent-dfw5-2.xx.fbcdn.net/v/t39.30808-6/449064058_10160178492637481_2796203814667381519_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_ohc=A-99VYJDqTYQ7kNvgGDFbkK&_nc_ht=scontent-dfw5-2.xx&_nc_gid=AOAtKH_azV2HI25nFnnbyuS&oh=00_AYBLnnrALpP1-a9z4329HWHCjaJ7XjJ_Zw-q6U89dMh_Gg&oe=6707FF1F" alt="Bones & Ammo Poster">
+                    <h3>Bones & Ammo Poster</h3>
+                    <p>$10.00</p>
+                    <button class="btn snipcart-add-item" 
+                            data-item-id="poster"
+                            data-item-price="10.00"
+                            data-item-url="/#"
+                            data-item-description="Exclusive Bones & Ammo Poster"
+                            data-item-image="https://scontent-dfw5-2.xx.fbcdn.net/v/t39.30808-6/449064058_10160178492637481_2796203814667381519_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_ohc=A-99VYJDqTYQ7kNvgGDFbkK&_nc_ht=scontent-dfw5-2.xx&_nc_gid=AOAtKH_azV2HI25nFnnbyuS&oh=00_AYBLnnrALpP1-a9z4329HWHCjaJ7XjJ_Zw-q6U89dMh_Gg&oe=6707FF1F"
+                            data-item-name="Bones & Ammo Poster">
+                        Add to Cart
+                    </button>
+                </div>
+                <!-- Add more products as needed -->
+            </div>
+        </div>
+    </section>
+    
+    <!-- ================== Blog Section ================== -->
+    <section class="blog" id="blog">
+        <div class="container">
+            <h1>Latest News</h1>
+            <input type="text" id="blogSearch" placeholder="Search blog posts..." aria-label="Search blog posts">
+            <div class="blog-posts">
+                <div class="post">
+                    <h2>The Return of BoneStock Announced</h2>
+                    <p>We are thrilled to announce z95.5's 20 Year Anniversary Party with The Return of BoneStock this year 2024! Tickets are selling fast, so secure your spot today.</p>
+                    <a href="#tour" class="btn">Read More</a>
+                </div>
+                <div class="post">
+                    <h2>New YouTube Video for "The Devils Road"</h2>
+                    <p>The new video of our single "The Devils Road" is now available on YouTube. Watch now and let us know what you think!</p>
+                    <a href="#gallery" class="btn">Watch Now</a>
+                </div>
+                <div class="post">
+                    <h2>New Single "Shadows of War" Released</h2>
+                    <p>Our new single "Shadows of War" is now available on all streaming platforms. Listen now and let us know what you think!</p>
+                    <a href="#music" class="btn">Listen Now</a>
+                </div>
+                <!-- Add more posts as needed -->
+            </div>
+        </div>
+    </section>
+    
+    <!-- ================== Contact Section ================== -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <form action="https://formspree.io/f/yourformid" method="POST" class="contact-form" aria-label="Contact Form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required aria-required="true">
+    
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="_replyto" required aria-required="true">
+    
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required aria-required="true"></textarea>
+    
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+    
+    <!-- ================== Footer ================== -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Bones & Ammo. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://www.facebook.com/bonesandammo" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://x.com/Legionkingz_" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/legionkingz/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.youtube.com/@Legionkingz" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            </div>
+            <div class="back-to-top" id="backToTop" aria-label="Back to Top">
+                <i class="fas fa-arrow-up"></i>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- ================== JavaScript Libraries ================== -->
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    
+    <!-- Lightbox2 JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js" integrity="sha512-tu8LlIhI/XTrl3iUjVZkU5gULjOBt6dfXlVDr0pvZs1q+ygA9jUpUOXjMjG9bdqjnLJrZNFvYrX9kZ4S/ZPG5w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <!-- Snipcart JS -->
+    <script src="https://cdn.snipcart.com/themes/v3.0.31/default/snipcart.js"></script>
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_GOOGLE_ANALYTICS_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        
+        gtag('config', 'YOUR_GOOGLE_ANALYTICS_ID');
+    </script>
+    
+    <!-- ================== Snipcart Configuration ================== -->
+    <div hidden id="snipcart" data-api-key="NmI5ZmQxMjgtMjBmNy00Y2I3LWEwZTQtN2M1MjhmYTU4ODUxNjM4NjM5ODMyNzMyNTQ4MTgw"></div>
+    
+    <!-- ================== Custom JavaScript ================== -->
+    <script>
+        // Initialize Swiper for Announcements Carousel
+        var swiper = new Swiper('.swiper-container', {
+            loop: true,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+
+        // Initialize Swiper for Discography (Album Slider)
+        var albumSwiper = new Swiper('.discography', {
+            slidesPerView: 3,
+            spaceBetween: 30,
+            loop: true,
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false,
+            },
+            breakpoints: {
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 30,
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                640: {
+                    slidesPerView: 1,
+                    spaceBetween: 10,
+                },
+            }
+        });
+
+        // Toggle Navigation Menu on Mobile
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            const isExpanded = hamburger.getAttribute('aria-expanded') === 'true';
+            hamburger.setAttribute('aria-expanded', !isExpanded);
+        });
+        
+        // Close menu when a link is clicked
+        const links = document.querySelectorAll('.nav-links a');
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                hamburger.setAttribute('aria-expanded', 'false');
+            });
+        });
+        
+        // Change Navbar Background on Scroll
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+
+            // Show or hide Back to Top button
+            const backToTop = document.getElementById('backToTop');
+            if (window.scrollY > 300) {
+                backToTop.style.display = 'block';
+            } else {
+                backToTop.style.display = 'none';
+            }
+        });
+        
+        // Back to Top Button Visibility
+window.addEventListener('scroll', () => {
+    const backToTop = document.getElementById('backToTop');
+    if (window.scrollY > 300) {
+        backToTop.style.display = 'block';
+    } else {
+        backToTop.style.display = 'none';
+    }
+});
+
+// Smooth Scroll to Top
+document.getElementById('backToTop').addEventListener('click', function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+        
+        // Expandable Blog Posts
+        const blogPosts = document.querySelectorAll('.blog-posts .post');
+        blogPosts.forEach(post => {
+            post.querySelector('h2').addEventListener('click', () => {
+                post.classList.toggle('active');
+            });
+        });
+        
+        // Initialize Google Maps with Multiple Markers
+        function initMap() {
+            const mapContainer = document.querySelector('.map iframe');
+            if (mapContainer) {
+                const map = new google.maps.Map(mapContainer, {
+                    center: { lat: 52.5200, lng: 13.4050 }, // Example: Berlin coordinates
+                    zoom: 5,
+                });
+                
+                // Example markers
+                const venues = [
+                    { lat: 52.5200, lng: 13.4050, title: 'Berlin, Metal Fortress' },
+                    { lat: 51.5074, lng: -0.1278, title: 'London, Rock Arena' },
+                    { lat: 48.8566, lng: 2.3522, title: 'Paris, Thunder Dome' },
+                    // Add more venues as needed
+                ];
+                
+                venues.forEach(venue => {
+                new google.maps.Marker({
+                    position: { lat: venue.lat, lng: venue.lng },
+                    map: map,
+                    title: venue.title,
+                });
+            });
+        }
+        
+        // Load Google Maps API
+        function loadGoogleMaps() {
+            const script = document.createElement('script');
+            script.src = `https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&callback=initMap`;
+            script.async = true;
+            script.defer = true;
+            document.head.appendChild(script);
+        }
+        
+        // Load Google Maps after DOM Content is Loaded
+        document.addEventListener('DOMContentLoaded', loadGoogleMaps);
+        
+        // Lazy  in Images
+        document.addEventListener("DOMContentLoaded", function() {
+    const lazyImages = document.querySelectorAll('img.lazy');
+    const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const img = entry.target;
+                img.src = img.dataset.src;
+                img.classList.add('loaded');
+                observer.unobserve(img);
+            }
+        });
+    });
+
+    lazyImages.forEach(img => {
+        imageObserver.observe(img);
+    });
+});
+
+        
+        // Form Validation (Enhanced Example)
+        const contactForm = document.querySelector('.contact-form');
+        contactForm.addEventListener('submit', function(e) {
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
+            
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            
+            if(name === '' || email === '' || message === '') {
+                e.preventDefault();
+                alert('Please fill in all fields.');
+            } else if(!emailPattern.test(email)) {
+                e.preventDefault();
+                alert('Please enter a valid email address.');
+            }
+        });
+        
+        // Modal Functionality for Band Members
+        const modals = document.querySelectorAll('.modal');
+        const members = document.querySelectorAll('.band-members .member');
+        const closeButtons = document.querySelectorAll('.modal .close');
+        
+        members.forEach(member => {
+            member.addEventListener('click', () => {
+                const modalId = member.getAttribute('data-modal');
+                document.getElementById(modalId).style.display = 'block';
+            });
+        });
+        
+        closeButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                btn.parentElement.parentElement.style.display = 'none';
+            });
+        });
+        
+        window.addEventListener('click', (e) => {
+            modals.forEach(modal => {
+                if (e.target == modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        });
+        
+        // Blog Search Functionality
+        const blogSearch = document.getElementById('blogSearch');
+        blogSearch.addEventListener('input', function() {
+            const filter = this.value.toLowerCase();
+            const posts = document.querySelectorAll('.blog-posts .post');
+            
+            posts.forEach(post => {
+                const title = post.querySelector('h2').textContent.toLowerCase();
+                const content = post.querySelector('p').textContent.toLowerCase();
+                if(title.includes(filter) || content.includes(filter)) {
+                    post.style.display = 'block';
+                } else {
+                    post.style.display = 'none';
+                }
+            });
+        });
+    </script>
+    
+    <!-- ================== Google Maps API ================== -->
+    <!-- The Google Maps script is loaded dynamically in the custom JavaScript -->
+    
+    <!-- ================== Snipcart Configuration ================== -->
+    <div hidden id="snipcart" data-api-key="NmI5ZmQxMjgtMjBmNy00Y2I3LWEwZTQtN2M1MjhmYTU4ODUxNjM4NjM5ODMyNzMyNTQ4MTgw"></div>
+    
+    
+<!-- ================== Back to Top Button ================== -->
+<a id="backToTop" class="back-to-top" href="#"><i class="fas fa-arrow-up"></i></a>
+
+<style>
+    .back-to-top {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        background: #e50914;
+        color: white;
+        padding: 10px;
+        border-radius: 50%;
+        display: none;
+        font-size: 24px;
+        cursor: pointer;
+        transition: background 0.3s ease, transform 0.3s ease;
+    }
+
+    .back-to-top:hover {
+        background: #b20710;
+        transform: scale(1.1);
+    }
+</style>
+
+<script>
+    // Smooth scroll to top
+    const backToTopButton = document.getElementById('backToTop');
+    
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+            backToTopButton.style.display = 'block';
+        } else {
+            backToTopButton.style.display = 'none';
+        }
+    });
+
+    backToTopButton.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+</script>
+
+<!-- Lightbox Initialization -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+<script>
+    // Initialize Lightbox
+    document.addEventListener("DOMContentLoaded", function() {
+        lightbox.option({
+            'resizeDuration': 200,
+            'wrapAround': true
+        });
+    });
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const lazyImages = document.querySelectorAll('img.lazy');
+        const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    img.src = img.dataset.src;
+                    img.classList.add('loaded');
+                    observer.unobserve(img);
+                }
+            });
+        });
+
+        lazyImages.forEach(img => {
+            imageObserver.observe(img);
+        });
+    });
+</script>
+    
+
+    <!-- ================== Service Worker for PWA ================== -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+                    console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                }, function(err) {
+                    console.log('ServiceWorker registration failed: ', err);
+                });
+            });
+        }
+    </script>
+</body>
+</html>
